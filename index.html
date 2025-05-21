@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire d'inscription à l'OBC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 10px;
+
+  input.form-control,
+input.form-check-input {
+  font-size: 0.8rem;     /* Réduit la taille du texte dans les champs */
+  padding: 0.25rem 0.4rem; /* Réduit l’espace intérieur */
+  height: 1.5rem;         /* Réduit la hauteur globale */
+font-size: 0.5rem;
+}
+
+h2 {color: #0d6efd; /* Bleu Bootstrap ou toute autre couleur de ton choix */
+font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold; /* Texte en gras */
+    color: #4682B4; /* Bleu clair */
+    text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff; /* Effet de double contour */
+}
+ h5 {
+font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #87CEEB; /* Bleu clair */
+    background-color: #f8f9fa;
+  
+}
+    }
+    .form-container {
+      max-width: 330px;
+      margin: auto;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 0.8em;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .error {
+      color: red;
+      font-size: 0.7em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 class="text-center mb-4">🎓 INSCRIPTION OBC 2️⃣0️⃣2️⃣5️⃣🇨🇲</h2>
+   <img src="e.png" alt="Logo OBC" class="logo">
+
+    <form id="obcForm" novalidate>
+
+      <!-- Informations personnelles -->
+      <h5>ℹ️ Informations personnelles </h5>
+
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom complet*</label>
+        <input type="text" class="form-control" id="nom" required>
+        <div class="error" id="error-nom"></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Sexe*</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sexe" id="masculin" value="Masculin" required>
+          <label class="form-check-label" for="masculin">Masculin</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sexe" id="feminin" value="Féminin">
+          <label class="form-check-label" for="feminin">Féminin</label>
+        </div>
+        <div class="error" id="error-sexe"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="dateNaissance" class="form-label">Date de naissance*</label>
+        <input type="date" class="form-control" id="dateNaissance" required>
+        <div class="error" id="error-date"></div>
+      </div>
+
+      <!-- Informations sur l'examen -->
+      <h5>📜 Informations sur l'examen</h5>
+
+      <div class="mb-3">
+        <label class="form-label">Type d'établissement*</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="etablissement" id="general" value="Général" required>
+          <label class="form-check-label" for="general">Général</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="etablissement" id="technique" value="Technique">
+          <label class="form-check-label" for="technique">Technique</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="etablissement" id="professionnel" value="Professionnel">
+          <label class="form-check-label" for="professionnel">Professionnel</label>
+        </div>
+        <div class="error" id="error-etablissement"></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Série*</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="serie" id="serieC" value="C" required>
+          <label class="form-check-label" for="serieC">C</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="serie" id="serieD" value="D">
+          <label class="form-check-label" for="serieD">D</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="serie" id="serieA" value="A">
+          <label class="form-check-label" for="serieA">A</label>
+        </div>
+        <div class="error" id="error-serie"></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Type d'examen*</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="examen" id="bpc" value="BPC" required>
+          <label class="form-check-label" for="bpc">BPC</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="examen" id="probatoire" value="Probatoire">
+          <label class="form-check-label" for="probatoire">Probatoire</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="examen" id="bac" value="Baccalauréat">
+          <label class="form-check-label" for="bac">Baccalauréat</label>
+        </div>
+        <div class="error" id="error-examen"></div>
+      </div>
+
+      <div class="d-grid gap-2 mt-4">
+        <button type="submit" class="btn btn-primary">Confirmer</button>
+      </div>
+
+     
+    </form>
+  </div>
+
+  <!-- Bootstrap JS + Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('obcForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let isValid = true;
+
+    const nom = document.getElementById('nom').value.trim();
+    const date = document.getElementById('dateNaissance').value;
+    const sexe = document.querySelector('input[name="sexe"]:checked');
+    const etablissement = document.querySelector('input[name="etablissement"]:checked');
+    const serie = document.querySelector('input[name="serie"]:checked');
+    const examen = document.querySelector('input[name="examen"]:checked');
+
+    // Reset all error messages
+    document.querySelectorAll('.error').forEach(el => el.innerText = '');
+
+    // Nom validation
+    if (!/^[a-zA-ZÀ-ÿ\s\-']{2,}$/.test(nom)) {
+      document.getElementById('error-nom').innerText = 'Veuillez entrer un nom valide (au moins 2 lettres).';
+      isValid = false;
+    }
+
+    if (!sexe) {
+      document.getElementById('error-sexe').innerText = 'Veuillez sélectionner votre sexe.';
+      isValid = false;
+    }
+
+    if (!date) {
+      document.getElementById('error-date').innerText = 'Veuillez entrer votre date de naissance.';
+      isValid = false;
+    }
+
+    if (!etablissement) {
+      document.getElementById('error-etablissement').innerText = 'Veuillez sélectionner le type d’établissement.';
+      isValid = false;
+    }
+
+    if (!serie) {
+      document.getElementById('error-serie').innerText = 'Veuillez sélectionner la série.';
+      isValid = false;
+    }
+
+    if (!examen) {
+      document.getElementById('error-examen').innerText = 'Veuillez sélectionner le type d’examen.';
+      isValid = false;
+    }
+
+    if (isValid) {
+      // Créer le message de bienvenue
+      const welcomeDiv = document.createElement('div');
+      welcomeDiv.id = 'welcomeMessage';
+      welcomeDiv.innerHTML = `📚 Bienvenue sur la plateforme OBC 2️⃣0️⃣2️⃣5️⃣ !<br>
+      ✏️ Que le savoir soit ta boussole, la discipline ton guide,<br>
+      et la réussite ton objectif ! 🧠<br>Bonne chance pour l’épreuve ! 🍀`;
+     welcomeDiv.style.cssText = `
+  width: 350px; /* Taille du conteneur */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1000;
+  text-align: center;
+
+      `;
+      document.body.appendChild(welcomeDiv);
+
+      // Supprimer le message et rediriger après 5 secondes
+      setTimeout(() => {
+        welcomeDiv.remove();
+        window.location.href = 'ac.html';
+      }, 5000);
+    }
+  });
+</script>
+</body>
+  </html>
