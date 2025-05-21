@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir une matière</title>
+    <link href="https:                                                                                    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:         
+        }
+        
+        .header-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .form-check-label {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="header-title text-center">📚 Veuillez choisir une matière pour que nous puissions vous fournir une épreuve</h1>
+        <form>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="matiere" id="philosophie">
+                <label class="form-check-label" for="philosophie">Philosophie</label>
+                <a href="https://wa.me/qr/3NHVLJS7DLQRM1" class="btn btn-sm btn-primary float-end">Accéder à l'épreuve</a>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="matiere" id="informatique">
+                <label class="form-check-label" for="informatique">Informatique</label>
+                <a href="LIEN_INFORMATIQUE" class="btn btn-sm btn-primary float-end">Accéder à l'épreuve</a>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="matiere" id="mathematiques">
+                <label class="form-check-label" for="mathematiques">Mathématiques</label>
+                <a href="LIEN_MATHEMATIQUES" class="btn btn-sm btn-primary float-end">Accéder à l'épreuve</a>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="matiere" id="sciences">
+                <label class="form-check-label" for="sciences">Sciences</label>
+                <a href="LIEN_SCIENCES" class="btn btn-sm btn-primary float-end">Accéder à l'épreuve</a>
+            </div>
+            <!-- Ajoutez d'autres matières ici -->
+        </form>
+    </div>
+
+    <script>
+                                                 
+        document.querySelectorAll('input[name="matiere"]').forEach((radio) => {
+            radio.addEventListener('change', () => {
+                let url = '';
+                switch (radio.id) {
+                    case 'philosophie':
+                        url = document.querySelector('label[for="philosophie"]').nextElementSibling.href;
+                        break;
+                    case 'informatique':
+                        url = document.querySelector('label[for="informatique"]').nextElementSibling.href;
+                        break;
+                    case 'mathematiques':
+                        url = document.querySelector('label[for="mathematiques"]').nextElementSibling.href;
+                        break;
+                    case 'sciences':
+                        url = document.querySelector('label[for="sciences"]').nextElementSibling.href;
+                        break;
+                }
+                window.location.href = url;
+            });
+        });
+    </script>
+</body>
+</html>
+
+

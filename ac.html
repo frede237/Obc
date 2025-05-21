@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Choix de Série</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 70px;
+        }
+
+        .logo {
+            width:170px;
+            height: 170px;
+            border-radius: 30%;
+            object-fit: cover;
+        }
+
+        .logo-central {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 20px;
+        }
+
+        .header-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .multicolor-text {
+            font-weight: bold;
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .multicolor-text span:nth-child(3n+1) {
+            color: green;
+        }
+
+        .multicolor-text span:nth-child(3n+2) {
+            color: red;
+        }
+
+        .multicolor-text span:nth-child(3n) {
+            color: gold;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 65px;
+font-size: 40px;
+border: 9px solid #f0f0f0;
+        }
+
+        .form-check-label {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête avec trois logos -->
+    <div class="header-logos">
+        <img src="g.png" alt="Logo Gauche" class="logo">
+        <img src="e.png" alt="Logo Centre" class="logo-central">
+        <img src="f.png" alt="Logo Droit" class="logo">
+    </div>
+
+    <!-- Texte stylisé -->
+    <div class="multicolor-text">
+        <!-- Chaque lettre dans un <span> pour appliquer des couleurs -->
+        <span>V</span><span>e</span><span>u</span><span>i</span><span>l</span><span>l</span><span>e</span><span>z</span>
+        <span> </span>
+        <span>c</span><span>h</span><span>o</span><span>i</span><span>s</span><span>i</span><span>r</span>
+        <span> </span>
+        <span>v</span><span>o</span><span>t</span><span>r</span><span>e</span>
+        <span> </span>
+        <span>s</span><span>é</span><span>r</span><span>i</span><span>e</span>
+    </div>
+
+    <!-- Boutons radio -->
+    <div class="radio-group">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="serie" id="serieA">
+            <label class="form-check-label" for="serieA">
+                Série A
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="serie" id="serieC">
+            <label class="form-check-label" for="serieC">
+                Série C
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="serie" id="serieD">
+            <label class="form-check-label" for="serieD">
+                Série D
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="serie" id="serieT">
+            <label class="form-check-label" for="serieT">
+                Technique
+            </label>
+        </div>
+    </div>
+<p fontsize: 20px, class="mt-3 text-muted"><strongfont-family: Arial, sans-serif;
+    >🎓 savoir :</strong>
+
+"L'Office du Baccalauréat au Cameroun (OBC) est l'organisme chargé de l'organisation et de la supervision des examens du baccalauréat au Cameroun 📚🎓. Avec son drapeau 🇨🇲, l'OBC représente l'excellence et la rigueur dans l'évaluation des connaissances des élèves camerounais.
+
+Sous la supervision de ses responsables, l'OBC travaille sans relâche pour garantir la crédibilité et la transparence des examens du baccalauréat 📝. Les équipes de l'OBC œuvrent pour offrir aux élèves camerounais une évaluation juste et équitable de leurs connaissances.
+
+L'OBC est fier de contribuer à la formation des futures générations de leaders et de citoyens camerounais 🌟. Avec son engagement envers l'excellence et la qualité, l'OBC continue de jouer un rôle clé dans le système éducatif camerounais 📚."
+
+
+      </p>
+
+    <script>
+        // Redirige selon le bouton sélectionné
+        document.querySelectorAll('input[name="serie"]').forEach((radio) => {
+            radio.addEventListener('change', () => {
+                let url = '#'; // Lien par défaut
+
+                switch (radio.id) {
+                    case 'serieA':
+                        url = 'l.html';
+                        break;
+                    case 'serieC':
+                        url = 'LIEN_SERIE_C.html';
+                        break;
+                    case 'serieD':
+                        url = 'LIEN_SERIE_D.html';
+                        break;
+                    case 'serieT':
+                        url = 'LIEN_TECHNIQUE.html';
+                        break;
+                }
+
+                window.location.href = url;
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
